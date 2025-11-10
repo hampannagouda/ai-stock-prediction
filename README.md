@@ -1,94 +1,134 @@
-# 🤖 AI-Powered Stock Prediction System
+# 🧠 AI Stock Prediction System — Next Day Close Forecast (LSTM)
 
-A comprehensive machine learning system that predicts stock price movements using multiple data sources and advanced AI techniques.
-
-## ✨ Features
-
-- **📊 Multi-Source Data Fusion**: Historical prices + News sentiment + Social media sentiment
-- **🧠 Advanced AI Models**: XGBoost classifier with FinBERT and VADER sentiment analysis
-- **📈 Interactive Dashboard**: Real-time Streamlit web application with Plotly charts
-- **🔍 Model Explainability**: SHAP values for feature importance analysis
-- **💰 Backtesting Framework**: Realistic performance testing with transaction costs
-
-## 🛠️ Tech Stack
-
-- **Python 3.12**
-- **Machine Learning**: XGBoost, scikit-learn
-- **NLP**: FinBERT (Transformers), VADER Sentiment
-- **Data**: yfinance, pandas, numpy
-- **Visualization**: Streamlit, Plotly, matplotlib
-- **Explainability**: SHAP
-
-## 🚀 Quick Start
-
-1. **Clone the repository**
-git clone https://github.com/hampnna/ai-stock-prediction.git
-cd ai-stock-prediction
-
-2. **Create virtual environment**
-python -m venv venv
-venv\Scripts\activate # Windows
-
-3. **Install dependencies**
-pip install -r requirements.txt
-
-4. **Run the data pipeline**
-python src/data_ingest.py
-python src/preprocess.py
-python src/features.py
-python src/model.py
-python src/backtest.py
-
-5. **Launch dashboard**
-streamlit run src/app.py
-
-
-## 📊 Project Structure
-
-stock-prediction-project/
-├── src/
-│ ├── data_ingest.py # Data collection from Yahoo Finance
-│ ├── preprocess.py # Technical indicators & sentiment analysis
-│ ├── features.py # Feature engineering & target creation
-│ ├── model.py # XGBoost training & validation
-│ ├── backtest.py # Strategy backtesting
-│ ├── explain.py # SHAP model explainability
-│ └── app.py # Streamlit dashboard
-├── requirements.txt # Python dependencies
-└── README.md # Project documentation
-
-
-## 🎯 Key Results
-
-- **Model Accuracy**: ~65-70% on next-day direction prediction
-- **Features**: 67 engineered features including technical indicators and sentiment scores
-- **Backtesting**: Includes realistic transaction costs (0.1%)
-- **Explainability**: SHAP analysis reveals most important prediction factors
-
-## 📈 Dashboard Features
-
-- **Real-time stock price charts** with AI prediction markers
-- **Technical analysis indicators** (RSI, MACD, Bollinger Bands)
-- **Sentiment analysis trends** from news and social media
-- **Portfolio performance comparison** (AI strategy vs buy-and-hold)
-- **Feature importance rankings** with SHAP values
-
-## 🔬 Model Details
-
-- **Algorithm**: XGBoost Gradient Boosting Classifier
-- **Features**: Price-based, technical indicators, sentiment scores
-- **Validation**: Time series cross-validation (5 folds)
-- **Target**: Binary classification (UP/DOWN next day movement)
-
-## 🤝 Contributing
-
-Feel free to open issues and pull requests!
-
-## 📄 License
-
-MIT License - feel free to use this code for learning and projects.
+A deep learning-based stock market prediction system that uses **LSTM (Long Short-Term Memory)** networks to predict the **next day’s closing price** for any listed stock.  
+Built with Python, TensorFlow, and Streamlit — this project combines data science, AI, and web deployment skills.
 
 ---
 
-**Built with ❤️ by [hampanna]**
+## 📊 Features
+✅ Real-time data fetching using `yfinance`  
+✅ Technical indicators (SMA, EMA, RSI, MACD, etc.)  
+✅ Time-series prediction using **LSTM neural network**  
+✅ Interactive **Streamlit web dashboard**  
+✅ Visual comparison of actual vs predicted prices  
+✅ Modular code structure for easy enhancement  
 
+---
+
+## 🧰 Tech Stack
+| Component | Technology |
+|------------|-------------|
+| Language | Python 3.11 |
+| ML Framework | TensorFlow / Keras |
+| Visualization | Matplotlib, Seaborn |
+| Data Source | Yahoo Finance API (`yfinance`) |
+| Web App | Streamlit |
+| Environment | VS Code + Virtualenv |
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/hampannagouda/ai-stock-prediction.git
+cd ai-stock-prediction
+
+### 2️⃣ Create a Virtual Environment
+python -m venv venv
+
+Activate it:
+
+Windows (Git Bash):
+
+source venv/Scripts/activate
+
+
+Command Prompt:
+
+venv\Scripts\activate
+
+### 3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+🧠 Train the Model
+
+python train_lstm.py
+
+This script:
+
+Downloads stock data
+
+Adds technical indicators
+
+Trains an LSTM model
+
+Saves model and scalers to /models folder
+
+Output example:
+
+MAE: 3.12, RMSE: 4.89
+✅ Model and scalers saved successfully.
+
+Launch the Streamlit App
+streamlit run app.py
+
+Open your browser at http://localhost:8501
+
+You’ll see an interactive dashboard where you can:
+
+Enter any stock ticker (AAPL, TSLA, INFY.NS)
+
+Get predicted next-day closing price
+
+View line charts of past and predicted trends
+
+### 🧩 Project Structure
+ai-stock-prediction/
+│
+├── data_pipeline.py        # Data download, preprocessing, feature creation
+├── train_lstm.py           # Model training & evaluation
+├── app.py                  # Streamlit web UI
+├── requirements.txt
+├── README.md
+└── models/
+    ├── lstm_model.h5
+    ├── scaler_x.save
+    └── scaler_y.save
+
+### 🚀 Future Enhancements
+
+Add news sentiment analysis (NLP + Finance data)
+
+Implement Transformer-based models
+
+Integrate real-time stock streaming (WebSocket)
+
+Deploy on Streamlit Cloud / Render / AWS
+
+### 🧑‍💻 Author
+
+Hampannagouda
+B.Tech in Computer Science & Engineering, Dayanand Sagar University
+Passionate about AI, ML, and full-stack development.
+
+### ⭐ If you like this project, give it a star on GitHub!
+
+
+---
+
+## ✅ Next Steps for You
+
+1. Create the file `README.md` in your repo → paste the content above.  
+2. Commit & push to GitHub:
+   ```bash
+   git add .
+   git commit -m "Added README.md and project setup completed"
+   git push origin main
+
+
+Run python train_lstm.py to train the model once.
+
+Run streamlit run app.py to test your web app.
+
+Thank you.
