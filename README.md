@@ -117,18 +117,4 @@ Passionate about AI, ML, and full-stack development.
 
 ---
 
-## ✅ Next Steps for You
-
-1. Create the file `README.md` in your repo → paste the content above.  
-2. Commit & push to GitHub:
-   ```bash
-   git add .
-   git commit -m "Added README.md and project setup completed"
-   git push origin main
-
-
-Run python train_lstm.py to train the model once.
-
-Run streamlit run app.py to test your web app.
-
 Thank you.
