@@ -90,6 +90,21 @@ The neural network is built with a sequential architecture designed to learn sho
 
 ## ⚙️ Installation & Setup
 
+### 📋 Prerequisites & System Requirements
+
+Before running the application, please ensure your system meets the following requirements:
+*   **Python**: Version `3.11` is required (as defined in [runtime.txt](file:///c:/Users/hampa/OneDrive/Desktop/ai-stock-prediction/runtime.txt)).
+*   **Package Manager**: `pip` (comes pre-bundled with Python installations).
+*   **Git**: Required to clone the source code.
+*   **System Memory**: At least 4GB of RAM is recommended to train the LSTM models comfortably.
+
+All Python library dependencies are listed in [requirements.txt](file:///c:/Users/hampa/OneDrive/Desktop/ai-stock-prediction/requirements.txt) and will be installed during the setup process. Key libraries include:
+*   **Core ML / Deep Learning**: `tensorflow` (2.20.0), `scikit-learn` (1.5.2), `numpy` (1.26.4), `pandas` (2.2.3), `joblib` (1.4.2), `optuna` (3.6.1)
+*   **Financial Data & Indicators**: `yfinance` (0.2.40), `ta` (0.11.0)
+*   **Dashboard & Visualization**: `streamlit` (1.39.0), `matplotlib` (3.9.2), `seaborn` (0.13.2)
+
+---
+
 ### 1️⃣ Clone the Repository
 ```bash
 git clone https://github.com/hampannagouda/ai-stock-prediction.git
